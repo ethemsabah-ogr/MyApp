@@ -20,24 +20,24 @@ func main() {
 		AllowCredentials: true,
 	}))
 
-	router.POST("/categories", controllers.CreateCategory)
-	router.POST("/products", controllers.CreateProduct)
-	router.POST("/bulk-products", controllers.CreateProducts)
-	router.POST("/register", controllers.CreatePerson)
-	router.POST("/carts", controllers.CreateCartItem)
+	router.POST("/api/categories", controllers.CreateCategory)
+	router.POST("/api/products", controllers.CreateProduct)
+	router.POST("/api/bulk-products", controllers.CreateProducts)
+	router.POST("/api/register", controllers.CreatePerson)
+	router.POST("/api/carts", controllers.CreateCartItem)
 
-	router.GET("/categories", controllers.FindCategories)
-	router.GET("/products", controllers.FindProducts)
-	router.GET("/persons", controllers.FindPersons)
-	router.GET("/cart", controllers.FindCartItems)
+	router.GET("/api/categories", controllers.FindCategories)
+	router.GET("/api/products", controllers.FindProducts)
+	router.GET("/api/persons", controllers.FindPersons)
+	router.GET("/api/cart", controllers.FindCartItems)
 
-	router.PATCH("/categories/:id", controllers.UpdateCategory)
-	router.PATCH("/products/:id", controllers.UpdateProduct)
-	router.PATCH("/carts/:id", controllers.UpdateCartItem)
+	router.PATCH("/api/categories/:id", controllers.UpdateCategory)
+	router.PATCH("/api/products/:id", controllers.UpdateProduct)
+	router.PATCH("/api/carts/:id", controllers.UpdateCartItem)
 
-	router.DELETE("/categories/:id", controllers.DeleteCategory)
-	router.DELETE("/products/:id", controllers.DeleteProduct)
-	router.DELETE("/carts/:id", controllers.DeleteCartItem)
+	router.DELETE("/api/categories/:id", controllers.DeleteCategory)
+	router.DELETE("/api/products/:id", controllers.DeleteProduct)
+	router.DELETE("/api/carts/:id", controllers.DeleteCartItem)
 
 	router.Run("localhost:8080")
 }
