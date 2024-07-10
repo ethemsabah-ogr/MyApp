@@ -8,7 +8,7 @@ import (
 const (
 	username = "root"
 	password = "384367"
-	dbName   = "database"
+	dbName   = "db"
 	dbHost   = "localhost"
 	dbPort   = "3306"
 )
